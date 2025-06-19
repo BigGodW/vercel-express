@@ -6,7 +6,8 @@ router.get("/", async(req, res) => {
       
     // You can perform database operations here
     // For example, fetching users:
-    const users = await prisma.user.findMany();
+    const users = await prisma.sys_user.findMany({
+    });
     console.log(users)
   res.send(users);
 });

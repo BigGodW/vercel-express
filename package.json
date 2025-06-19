@@ -6,8 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prisma:generate": "prisma generate",
     "postinstall": "prisma generate",
-    "vercel-build": "prisma generate && prisma migrate deploy",
-    "generate":"prisma generate"
+    "vercel-build": "prisma generate ",
+    "generate": "prisma generate"
   },
   "keywords": [],
   "author": "",

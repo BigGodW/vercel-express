@@ -113,19 +113,259 @@ Prisma.NullTypes = {
  * Enums
  */
 
-exports.Prisma.CommentScalarFieldEnum = {
-  id: 'id'
+exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
+  ReadUncommitted: 'ReadUncommitted',
+  ReadCommitted: 'ReadCommitted',
+  RepeatableRead: 'RepeatableRead',
+  Serializable: 'Serializable'
+});
+
+exports.Prisma.Cms_articleScalarFieldEnum = {
+  id: 'id',
+  cid: 'cid',
+  subCid: 'subCid',
+  title: 'title',
+  shortTitle: 'shortTitle',
+  tagId: 'tagId',
+  attr: 'attr',
+  articleView: 'articleView',
+  source: 'source',
+  author: 'author',
+  description: 'description',
+  img: 'img',
+  content: 'content',
+  status: 'status',
+  pv: 'pv',
+  link: 'link',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
-exports.Prisma.PostScalarFieldEnum = {
+exports.Prisma.Cms_articletagScalarFieldEnum = {
   id: 'id',
-  slug: 'slug'
+  aid: 'aid',
+  tid: 'tid'
 };
 
-exports.Prisma.UserScalarFieldEnum = {
+exports.Prisma.Cms_categoryScalarFieldEnum = {
   id: 'id',
+  pid: 'pid',
+  seoTitle: 'seoTitle',
+  seoKeywords: 'seoKeywords',
+  seoDescription: 'seoDescription',
+  name: 'name',
+  pinyin: 'pinyin',
+  path: 'path',
+  description: 'description',
+  type: 'type',
+  url: 'url',
+  orderBy: 'orderBy',
+  target: 'target',
+  status: 'status',
+  mid: 'mid',
+  listView: 'listView',
+  articleView: 'articleView',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Cms_fieldScalarFieldEnum = {
+  id: 'id',
+  mid: 'mid',
+  cname: 'cname',
+  ename: 'ename',
+  type: 'type',
+  val: 'val',
+  defaultVal: 'defaultVal',
+  orderBy: 'orderBy',
+  length: 'length'
+};
+
+exports.Prisma.Cms_fragScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  mark: 'mark',
+  content: 'content',
+  type: 'type',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Cms_friendlinkScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  link: 'link',
+  orderBy: 'orderBy',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Cms_messageScalarFieldEnum = {
+  id: 'id',
+  type: 'type',
+  title: 'title',
+  name: 'name',
+  tel: 'tel',
+  wechat: 'wechat',
+  company: 'company',
+  content: 'content',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Cms_modelScalarFieldEnum = {
+  id: 'id',
+  model: 'model',
+  tableName: 'tableName',
+  status: 'status',
+  remark: 'remark'
+};
+
+exports.Prisma.Cms_siteScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  domain: 'domain',
   email: 'email',
-  name: 'name'
+  wx: 'wx',
+  icp: 'icp',
+  code: 'code',
+  json: 'json',
+  title: 'title',
+  keywords: 'keywords',
+  description: 'description',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Cms_slideScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  imgUrl: 'imgUrl',
+  linkUrl: 'linkUrl',
+  mark: 'mark',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Cms_tagScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  path: 'path',
+  count: 'count'
+};
+
+exports.Prisma.Ext_downloadScalarFieldEnum = {
+  id: 'id',
+  aid: 'aid',
+  fileName: 'fileName',
+  fileVersion: 'fileVersion',
+  fileLink: 'fileLink',
+  test1: 'test1'
+};
+
+exports.Prisma.Ext_lanhuaScalarFieldEnum = {
+  id: 'id',
+  aid: 'aid',
+  lanName: 'lanName',
+  lanFenlei: 'lanFenlei',
+  lanType: 'lanType'
+};
+
+exports.Prisma.Plus_collectScalarFieldEnum = {
+  id: 'id',
+  taskName: 'taskName',
+  targetUrl: 'targetUrl',
+  listTag: 'listTag',
+  startNum: 'startNum',
+  endNum: 'endNum',
+  increment: 'increment',
+  titleTag: 'titleTag',
+  articleTag: 'articleTag',
+  charset: 'charset',
+  pages: 'pages',
+  parseData: 'parseData',
+  cid: 'cid',
+  status: 'status',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Plus_gatherScalarFieldEnum = {
+  id: 'id',
+  taskName: 'taskName',
+  targetUrl: 'targetUrl',
+  parseData: 'parseData',
+  cid: 'cid',
+  status: 'status',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Sys_configScalarFieldEnum = {
+  id: 'id',
+  template: 'template',
+  appid: 'appid',
+  secret: 'secret',
+  accessKey: 'accessKey',
+  secretKey: 'secretKey',
+  domain: 'domain',
+  bucket: 'bucket',
+  uploadWay: 'uploadWay',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Sys_loginlogScalarFieldEnum = {
+  id: 'id',
+  uid: 'uid',
+  ip: 'ip',
+  country: 'country',
+  prov: 'prov',
+  city: 'city',
+  district: 'district',
+  isp: 'isp',
+  lat: 'lat',
+  lng: 'lng',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.Sys_menuScalarFieldEnum = {
+  id: 'id',
+  content: 'content',
+  remark: 'remark'
+};
+
+exports.Prisma.Sys_noticeScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  type: 'type',
+  content: 'content',
+  status: 'status',
+  remark: 'remark',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Sys_roleScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  value: 'value',
+  sort: 'sort',
+  status: 'status',
+  remark: 'remark',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.Sys_userScalarFieldEnum = {
+  id: 'id',
+  role_id: 'role_id',
+  username: 'username',
+  password: 'password',
+  status: 'status',
+  remark: 'remark',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.SortOrder = {
@@ -133,16 +373,212 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
-exports.Prisma.QueryMode = {
-  default: 'default',
-  insensitive: 'insensitive'
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
+exports.Prisma.cms_articleOrderByRelevanceFieldEnum = {
+  subCid: 'subCid',
+  title: 'title',
+  shortTitle: 'shortTitle',
+  tagId: 'tagId',
+  attr: 'attr',
+  articleView: 'articleView',
+  source: 'source',
+  author: 'author',
+  description: 'description',
+  img: 'img',
+  content: 'content',
+  link: 'link'
+};
+
+exports.Prisma.cms_categoryOrderByRelevanceFieldEnum = {
+  seoTitle: 'seoTitle',
+  seoKeywords: 'seoKeywords',
+  seoDescription: 'seoDescription',
+  name: 'name',
+  pinyin: 'pinyin',
+  path: 'path',
+  description: 'description',
+  type: 'type',
+  url: 'url',
+  target: 'target',
+  status: 'status',
+  mid: 'mid',
+  listView: 'listView',
+  articleView: 'articleView'
+};
+
+exports.Prisma.cms_fieldOrderByRelevanceFieldEnum = {
+  cname: 'cname',
+  ename: 'ename',
+  type: 'type',
+  val: 'val',
+  defaultVal: 'defaultVal',
+  orderBy: 'orderBy',
+  length: 'length'
+};
+
+exports.Prisma.cms_fragOrderByRelevanceFieldEnum = {
+  name: 'name',
+  mark: 'mark',
+  content: 'content',
+  type: 'type'
+};
+
+exports.Prisma.cms_friendlinkOrderByRelevanceFieldEnum = {
+  title: 'title',
+  link: 'link'
+};
+
+exports.Prisma.cms_messageOrderByRelevanceFieldEnum = {
+  title: 'title',
+  name: 'name',
+  tel: 'tel',
+  wechat: 'wechat',
+  company: 'company',
+  content: 'content'
+};
+
+exports.Prisma.cms_modelOrderByRelevanceFieldEnum = {
+  model: 'model',
+  tableName: 'tableName',
+  status: 'status',
+  remark: 'remark'
+};
+
+exports.Prisma.cms_siteOrderByRelevanceFieldEnum = {
+  name: 'name',
+  domain: 'domain',
+  email: 'email',
+  wx: 'wx',
+  icp: 'icp',
+  code: 'code',
+  json: 'json',
+  title: 'title',
+  keywords: 'keywords',
+  description: 'description'
+};
+
+exports.Prisma.cms_slideOrderByRelevanceFieldEnum = {
+  title: 'title',
+  imgUrl: 'imgUrl',
+  linkUrl: 'linkUrl',
+  mark: 'mark'
+};
+
+exports.Prisma.cms_tagOrderByRelevanceFieldEnum = {
+  name: 'name',
+  path: 'path'
+};
+
+exports.Prisma.ext_downloadOrderByRelevanceFieldEnum = {
+  fileName: 'fileName',
+  fileVersion: 'fileVersion',
+  fileLink: 'fileLink',
+  test1: 'test1'
+};
+
+exports.Prisma.ext_lanhuaOrderByRelevanceFieldEnum = {
+  lanName: 'lanName',
+  lanFenlei: 'lanFenlei',
+  lanType: 'lanType'
+};
+
+exports.Prisma.plus_collectOrderByRelevanceFieldEnum = {
+  taskName: 'taskName',
+  targetUrl: 'targetUrl',
+  listTag: 'listTag',
+  increment: 'increment',
+  titleTag: 'titleTag',
+  articleTag: 'articleTag',
+  charset: 'charset',
+  pages: 'pages',
+  parseData: 'parseData',
+  status: 'status'
+};
+
+exports.Prisma.plus_gatherOrderByRelevanceFieldEnum = {
+  taskName: 'taskName',
+  targetUrl: 'targetUrl',
+  parseData: 'parseData',
+  status: 'status'
+};
+
+exports.Prisma.sys_configOrderByRelevanceFieldEnum = {
+  template: 'template',
+  appid: 'appid',
+  secret: 'secret',
+  accessKey: 'accessKey',
+  secretKey: 'secretKey',
+  domain: 'domain',
+  bucket: 'bucket',
+  uploadWay: 'uploadWay'
+};
+
+exports.Prisma.sys_loginlogOrderByRelevanceFieldEnum = {
+  ip: 'ip',
+  country: 'country',
+  prov: 'prov',
+  city: 'city',
+  district: 'district',
+  isp: 'isp',
+  lat: 'lat',
+  lng: 'lng'
+};
+
+exports.Prisma.sys_menuOrderByRelevanceFieldEnum = {
+  content: 'content',
+  remark: 'remark'
+};
+
+exports.Prisma.sys_noticeOrderByRelevanceFieldEnum = {
+  title: 'title',
+  type: 'type',
+  content: 'content',
+  status: 'status',
+  remark: 'remark'
+};
+
+exports.Prisma.sys_roleOrderByRelevanceFieldEnum = {
+  name: 'name',
+  value: 'value',
+  status: 'status',
+  remark: 'remark'
+};
+
+exports.Prisma.sys_userOrderByRelevanceFieldEnum = {
+  role_id: 'role_id',
+  username: 'username',
+  password: 'password',
+  status: 'status',
+  remark: 'remark'
 };
 
 
 exports.Prisma.ModelName = {
-  Comment: 'Comment',
-  Post: 'Post',
-  User: 'User'
+  cms_article: 'cms_article',
+  cms_articletag: 'cms_articletag',
+  cms_category: 'cms_category',
+  cms_field: 'cms_field',
+  cms_frag: 'cms_frag',
+  cms_friendlink: 'cms_friendlink',
+  cms_message: 'cms_message',
+  cms_model: 'cms_model',
+  cms_site: 'cms_site',
+  cms_slide: 'cms_slide',
+  cms_tag: 'cms_tag',
+  ext_download: 'ext_download',
+  ext_lanhua: 'ext_lanhua',
+  plus_collect: 'plus_collect',
+  plus_gather: 'plus_gather',
+  sys_config: 'sys_config',
+  sys_loginlog: 'sys_loginlog',
+  sys_menu: 'sys_menu',
+  sys_notice: 'sys_notice',
+  sys_role: 'sys_role',
+  sys_user: 'sys_user'
 };
 
 /**
