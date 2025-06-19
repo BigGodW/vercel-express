@@ -1,8 +1,14 @@
 const express = require('express')
 const router = express.Router()
-
-router.get("/", (req, res) => {
-  res.send("用户管理  !");
+const { PrismaClient } = require('../generated/prisma');
+const prisma = new PrismaClient()
+router.get("/", async(req, res) => {
+      
+    // You can perform database operations here
+    // For example, fetching users:
+    const users = await prisma.user.findMany();
+    console.log(users)
+  res.send(users);
 });
 
 // Define a route for user-related operations
