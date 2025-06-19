@@ -1,5 +1,4 @@
-const express = require("express");
-const app = express();
+const app = require('../server')
 const timenew = new Date().toISOString();
 app.get("/", (req, res) => res.send("Express & Vercel"+timenew));
 
